@@ -1,0 +1,628 @@
+U-Boot SPL 2013.07 (May 03 2023 - 18:31:45)
+Timer init
+CLK stop
+PLL init
+pll_init:366
+pll_cfg.pdiv = 10, pll_cfg.h2div = 5, pll_cfg.h0div = 5, pll_cfg.cdiv = 1, pll_cfg.l2div = 2
+nf=84 nr = 1 od0 = 1 od1 = 2
+cppcr is 05405100
+CPM_CPAPCR 0540510d
+nf=84 nr = 1 od0 = 1 od1 = 2
+cppcr is 05405100
+CPM_CPMPCR 07d0590d
+nf=100 nr = 1 od0 = 1 od1 = 2
+cppcr is 06405100
+CPM_CPVPCR 0640510d
+cppcr 0x9a773310
+apll_freq 1008000000 
+mpll_freq 1000000000 
+vpll_freq = 1200000000
+ddr sel mpll, cpu sel apll
+ddrfreq 500000000
+cclk  1008000000
+l2clk 504000000
+h0clk 200000000
+h2clk 200000000
+pclk  100000000
+CLK init
+SDRAM init
+sdram init start
+ddr_inno_phy_init ..!
+phy reg = 0x00000007, CL = 0x00000007
+ddr_inno_phy_init ..! 11:  00000004
+ddr_inno_phy_init ..! 22:  00000006
+ddr_inno_phy_init ..! 33:  00000006
+REG_DDR_LMR: 00000210
+REG_DDR_LMR: 00000310
+REG_DDR_LMR: 00000110
+REG_DDR_LMR, MR0: 00f73011
+T31_0x5: 00000007
+T31_0x15: 0000000c
+T31_0x4: 00000000
+T31_0x14: 00000002
+INNO_TRAINING_CTRL 1: 00000000
+INNO_TRAINING_CTRL 2: 000000a1
+T31_cc: 00000003
+INNO_TRAINING_CTRL 3: 000000a0
+T31_118: 0000003c
+T31_158: 0000003c
+T31_190: 0000001f
+T31_194: 0000001d
+jz-04 :  0x00000051 
+jz-08 :  0x000000a0 
+jz-28 :  0x00000024 
+DDR PHY init OK
+INNO_DQ_WIDTH   :00000003
+INNO_PLL_FBDIV  :00000014
+INNO_PLL_PDIV   :00000005
+INNO_MEM_CFG    :00000051
+INNO_PLL_CTRL   :00000018
+INNO_CHANNEL_EN :0000000d
+INNO_CWL        :00000006
+INNO_CL         :00000007
+DDR Controller init
+DDRC_STATUS         0x80000001
+DDRC_CFG            0x0a288a40
+DDRC_CTRL           0x0000011c
+DDRC_LMR            0x00400008
+DDRC_DLP            0x00000000
+DDRC_TIMING1        0x040e0806
+DDRC_TIMING2        0x02170707
+DDRC_TIMING3        0x2007051e
+DDRC_TIMING4        0x1a240031
+DDRC_TIMING5        0xff060405
+DDRC_TIMING6        0x32170505
+DDRC_REFCNT         0x00f25a01
+DDRC_MMAP0          0x000020fc
+DDRC_MMAP1          0x00002400
+DDRC_REMAP1         0x03020d0c
+DDRC_REMAP2         0x07060504
+DDRC_REMAP3         0x0b0a0908
+DDRC_REMAP4         0x0f0e0100
+DDRC_REMAP5         0x13121110
+DDRC_AUTOSR_EN      0x00000000
+sdram init finished
+SDRAM init ok
+board_init_r
+image entry point: 0x80100000
+ 
+ 
+U-Boot 2013.07 (May 03 2023 - 18:31:45)
+ 
+Board: ISVP (Ingenic XBurst T31 SoC)
+DRAM:  64 MiB
+Top of RAM usable for U-Boot at: 84000000
+Reserving 277k for U-Boot at: 83fb8000
+Reserving 32784k for malloc() at: 81fb4000
+Reserving 32 Bytes for Board Info at: 81fb3fe0
+Reserving 124 Bytes for Global Data at: 81fb3f64
+Reserving 128k for boot params() at: 81f93f64
+Stack Pointer at: 81f93f48
+Now running in RAM - U-Boot at: 83fb8000
+MMC:   msc: 0
+the manufacturer 85
+SF: Detected P25Q64H
+ 
+In:    serial
+Out:   serial
+Err:   serial
+Net:   ====>PHY not found!Jz4775-9161
+Hit any key to stop autoboot:  0 
+the manufacturer 85
+SF: Detected P25Q64H
+ 
+--->probe spend 4 ms
+otabakpaddr:0x0
+Card did not respond to voltage select!
+Error, mout fatfs failed, error num: 3
+the manufacturer 85
+SF: Detected P25Q64H
+ 
+--->probe spend 4 ms
+SF: 1835008 bytes @ 0x40000 Read: OK
+--->read spend 591 ms
+## Booting kernel from Legacy Image at 80600000 ...
+   Image Name:   Linux-3.10.14__isvp_swan_1.0__
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    1581969 Bytes = 1.5 MiB
+   Load Address: 80010000
+   Entry Point:  803d4810
+   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... OK
+ 
+Starting kernel ...
+ 
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 3.10.14__isvp_swan_1.0__ (lky@lky-PC) (gcc version 4.7.2 (Ingenic r2.3.3 2016.12) ) #1 PREEMPT Wed Jun 19 15:55:54 CST 2024
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU0 RESET ERROR PC:D82E0315
+[    0.000000] CPU0 revision is: 00d00100 (Ingenic Xburst)
+[    0.000000] FPU revision is: 00b70000
+[    0.000000] CCLK:1008MHz L2CLK:504Mhz H0CLK:250MHz H2CLK:250Mhz PCLK:125Mhz
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 00485000 @ 00010000 (usable)
+[    0.000000]  memory: 0003b000 @ 00495000 (usable after init)
+[    0.000000] User-defined physical RAM map:
+[    0.000000]  memory: 02854000 @ 00000000 (usable)
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x00000000-0x02853fff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x00000000-0x02853fff]
+[    0.000000] Primary instruction cache 32kB, 8-way, VIPT, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 8-way, VIPT, no aliases, linesize 32 bytes
+[    0.000000] pls check processor_id[0x00d00100],sc_jz not support!
+[    0.000000] MIPS secondary cache 128kB, 8-way, linesize 32 bytes.
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping off.  Total pages: 10243
+[    0.000000] Kernel command line: console=ttyS1,115200n8 mem=41296K@0x0 rmem=24240K@0x2854000 init=/linuxrc rootfstype=squashfs root=/dev/mtdblock2 rw mtdparts=jz_sfc:256k(uboot),1792k(kernel),960k(rootfs),4800k(app),384k(config)
+[    0.000000] PID hash table entries: 256 (order: -2, 1024 bytes)
+[    0.000000] Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Memory: 35368k/41296k available (3895k kernel code, 5928k reserved, 732k data, 236k init, 0k highmem)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] NR_IRQS:358
+[    0.000000] clockevents_config_and_register success.
+[    0.000020] Calibrating delay loop... 1001.88 BogoMIPS (lpj=5009408)
+[    0.037789] pid_max: default: 32768 minimum: 301
+[    0.042708] Mount-cache hash table entries: 512
+[    0.047746] Initializing cgroup subsys debug
+[    0.052008] Initializing cgroup subsys freezer
+[    0.058706] regulator-dummy: no parameters
+[    0.062937] NET: Registered protocol family 16
+[    0.071266] bio: create slab <bio-0> at 0
+[    0.077298] jz-dma jz-dma: JZ SoC DMA initialized
+[    0.082297] usbcore: registered new interface driver usbfs
+[    0.087916] usbcore: registered new interface driver hub
+[    0.093338] usbcore: registered new device driver usb
+[    0.098581]  (null): set:311  hold:312 dev=125000000 h=625 l=625
+[    0.104688]  (null): set:311  hold:312 dev=125000000 h=625 l=625
+[    0.110802] media: Linux media interface: v0.10
+[    0.115372] Linux video capture interface: v2.00
+[    0.121934] Switching to clocksource jz_clocksource
+[    0.126888] cfg80211: Calling CRDA to update world regulatory domain
+[    0.133904] NET: Registered protocol family 2
+[    0.138836] TCP established hash table entries: 512 (order: 0, 4096 bytes)
+[    0.145792] TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+[    0.152193] TCP: Hash tables configured (established 512 bind 512)
+[    0.158522] TCP: reno registered
+[    0.161724] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.167675] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.174250] NET: Registered protocol family 1
+[    0.178972] freq_udelay_jiffys[0].max_num = 10
+[    0.183448] cpufreq  udelay  loops_per_jiffy 
+[    0.187814] 12000     59635   59635  
+[    0.191080] 24000     119271  119271 
+[    0.194536] 60000     298179  298179 
+[    0.197968] 120000    596358  596358 
+[    0.201499] 200000    993930  993930 
+[    0.205041] 300000    1490895         1490895
+[    0.208739] 600000    2981790         2981790
+[    0.212447] 792000    3935963         3935963
+[    0.216166] 1008000   5009408         5009408
+[    0.219952] 1200000   5963580         5963580
+[    0.228564] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.234689] jffs2: version 2.2. © 2001-2006 Red Hat, Inc.
+[    0.240502] msgmni has been set to 69
+[    0.245584] io scheduler noop registered
+[    0.249515] io scheduler cfq registered (default)
+[    0.255792] jz-uart.1: ttyS1 at MMIO 0x10031000 (irq = 58) is a uart1
+[    0.263821] console [ttyS1] enabled, bootconsole disabled
+[    0.263821] console [ttyS1] enabled, bootconsole disabled
+[    0.278478] brd: module loaded
+[    0.283591] loop: module loaded
+[    0.287402] zram: Created 2 device(s) ...
+[    0.291626] logger: created 256K log 'log_main'
+[    0.313686] jz SADC driver registeres over!
+[    0.319059] jz TCU driver register completed
+[    0.324076] the id code = 856017, the flash name is P25Q64H
+[    0.329843] JZ SFC Controller for SFC channel 0 driver register
+[    0.336009] 5 cmdlinepart partitions found on MTD device jz_sfc
+[    0.342130] Creating 5 MTD partitions on "jz_sfc":
+[    0.347100] 0x000000000000-0x000000040000 : "uboot"
+[    0.352691] 0x000000040000-0x000000200000 : "kernel"
+[    0.358347] 0x000000200000-0x0000002f0000 : "rootfs"
+[    0.364003] 0x0000002f0000-0x0000007a0000 : "app"
+[    0.369336] 0x0000007a0000-0x000000800000 : "config"
+[    0.375006] SPI NOR MTD LOAD OK
+[    0.378334] tun: Universal TUN/TAP device driver, 1.6
+[    0.383597] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    0.390090] Bus Mode Reg after reset: 0x00020101, cnt=0
+[    0.396510] Bus Mode Reg after reset: 0x00020101, cnt=1
+[    0.402905] Bus Mode Reg after reset: 0x00020101, cnt=2
+[    0.409310] Bus Mode Reg after reset: 0x00020101, cnt=3
+[    0.415714] Bus Mode Reg after reset: 0x00020101, cnt=4
+[    0.422108] Bus Mode Reg after reset: 0x00020101, cnt=5
+[    0.428512] Bus Mode Reg after reset: 0x00020101, cnt=6
+[    0.434916] Bus Mode Reg after reset: 0x00020101, cnt=7
+[    0.441309] Bus Mode Reg after reset: 0x00020101, cnt=8
+[    0.447712] Bus Mode Reg after reset: 0x00020101, cnt=9
+[    0.454114] func:jz_mii_bus_probe, synopGMAC_reset failed
+[    0.459704] jz_mii_bus: probe of jz_mii_bus.0 failed with error -1
+[    0.466162] =======>gmacdev = 0x821d3880<================
+[    0.471744] =========>gmacdev->MacBase = 0xb34b0000 DmaBase = 0xb34b1000
+[    0.478687] Bus Mode Reg after reset: 0x00020101, cnt=0
+[    0.485094] Bus Mode Reg after reset: 0x00020101, cnt=1
+[    0.491488] Bus Mode Reg after reset: 0x00020101, cnt=2
+[    0.497892] Bus Mode Reg after reset: 0x00020101, cnt=3
+[    0.504296] Bus Mode Reg after reset: 0x00020101, cnt=4
+[    0.510690] Bus Mode Reg after reset: 0x00020101, cnt=5
+[    0.517092] Bus Mode Reg after reset: 0x00020101, cnt=6
+[    0.523498] Bus Mode Reg after reset: 0x00020101, cnt=7
+[    0.529892] Bus Mode Reg after reset: 0x00020101, cnt=8
+[    0.536296] Bus Mode Reg after reset: 0x00020101, cnt=9
+[    0.542689] func:jz_mac_probe, synopGMAC_reset failed
+[    0.547924] jz_mac: probe of jz_mac.0 failed with error -1
+[    0.553694] usbcore: registered new interface driver cdc_ether
+[    0.559768] usbcore: registered new interface driver rndis_host
+[    0.566028] jz-dwc2 jz-dwc2: cgu clk gate get error
+[    0.571089] DWC IN OTG MODE
+[    0.574652] dwc2 dwc2: Keep PHY ON
+[    0.578170] dwc2 dwc2: Using Buffer DMA mode
+[    0.582586] dwc2 dwc2: Core Release: 3.00a
+[    0.586878] dwc2 dwc2: DesignWare USB2.0 High-Speed Host Controller
+[    0.593390] dwc2 dwc2: new USB bus registered, assigned bus number 1
+[    0.600792] hub 1-0:1.0: USB hub found
+[    0.604738] hub 1-0:1.0: 1 port detected
+[    0.608927] dwc2 dwc2: DWC2 Host Initialized
+[    0.613677] usbcore: registered new interface driver cdc_acm
+[    0.619530] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    0.627998] usbcore: registered new interface driver usbserial
+[    0.634106] usbcore: registered new interface driver usbserial_generic
+[    0.640882] usbserial: USB Serial support registered for generic
+[    0.647141] usbcore: registered new interface driver option
+[    0.652928] usbserial: USB Serial support registered for GSM modem (1-port)
+[    0.660292] i2c /dev entries driver
+[    0.664398] jzmmc_v1.2 jzmmc_v1.2.0: vmmc regulator missing
+[    0.670452] jzmmc_v1.2 jzmmc_v1.2.0: register success!
+[    0.676164] TCP: cubic registered
+[    0.680047] NET: Registered protocol family 10
+[    0.685512] sit: IPv6 over IPv4 tunneling driver
+[    0.690308] dwc2 dwc2: ID PIN CHANGED!
+[    0.695307] ip6_gre: GRE over IPv6 tunneling driver
+[    0.700895] NET: Registered protocol family 17
+[    0.705680] lib80211: common routines for IEEE802.11 drivers
+[    0.712249] drivers/rtc/hctosys.c: unable to open rtc device (rtc0)
+[    0.725387] VFS: Mounted root (squashfs filesystem) readonly on device 31:2.
+[    0.733098] Freeing unused kernel memory: 236K (80495000 - 804d0000)
+can't run '/sbin/swapoff': No such file or directory
+mdev is ok......
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+[    1.366588] zram0: detected capacity change from 0 to 8388608
+Setting up swapspace version 1, size = 8384512 bytes
+UUID=db0ff13a-d0a3-4af7-9b8a-b[    1.377408] Adding 8188k swap on /dev/zram0.  Priority:-1 extents:1 across:8188k SS
+48b2a4b2de2
+[    1.436244] gvffs:Aug 12 2024:14:06:49  git: release-1.0.4 initialized
+ 
+Ingenic-uc1_1 login: [    1.521448] name : i2c0 nr : 0
+[    1.633828]  sensor_read: addr=0x3107 value = 0x9b
+[    1.743824]  sensor_read: addr=0x3107 value = 0x9b
+[    1.853824]  sensor_read: addr=0x3107 value = 0x9b
+[    1.963826]  sensor_read: addr=0x3107 value = 0x9b
+[    2.073824]  sensor_read: addr=0x3107 value = 0x9b
+[    2.183827]  sensor_read: addr=0x3107 value = 0x9b
+[    2.293824]  sensor_read: addr=0x3107 value = 0x9b
+[    2.403827]  sensor_read: addr=0x3107 value = 0x9b
+[    2.513824]  sensor_read: addr=0x3107 value = 0x9b
+[    2.519289]  sensor_read: addr=0x3108 value = 0x3a
+[    2.524649] info: success sensor find : sc2336p
+[    2.529334] name : i2c1 nr : 1
+sensor :sc2336p
+/app/jz/start_param
+--------------------
+isp_clk=220000000 isp_ch0_pre_dequeue_time=20 isp_ch0_pre_dequeue_interrupt_process=0 isp_ch0_pre_dequeue_valid_lines=540 isp_day_night_switch_drop_frame_num=6
+shvflip=1
+[    3.066852] @@@@ tx-isp-probe ok(version H20220426a), compiler date=Apr 26 2022 @@@@@
+/app/jz/modules/tx-isp-t31.ko isp_clk=220000000 isp_ch0_pre_dequeue_time=20 isp_ch0_pre_dequeue_interrupt_process=0 isp_ch0_pre_dequeue_valid_lines=540 isp_day_night_switch_drop_frame_num=6
+[    3.122368] jz_codec_register: probe() successful!
+[    3.533599] dma dma0chan24: Channel 24 have been requested.(phy id 7,type 0x06 desc a2733000)
+[    3.542807] dma dma0chan25: Channel 25 have been requested.(phy id 6,type 0x06 desc a1855000)
+[    3.552097] dma dma0chan26: Channel 26 have been requested.(phy id 5,type 0x04 desc a1820000)
+/app/jz/modules/sensor_sc2336p_t31.ko shvflip=1
+Version: dhcp.pre V0.4
+[0:00:03.776][I][daemon]Start app -> [@ipc]
+gv_ipc_tuya5_version:2.156.1074
+gv_ipc Dec  2 2024 17:17:46
+cmdline[console=ttyS1,115200n8 mem=41296K@0x0 rmem=24240K@0x2854000 init=/linuxrc rootfstype=squashfs root=/dev/mtdblock2 rw mtdparts=jz_sfc:256k(uboot),1792k(kernel),960k(rootfs),4800k(app),384k(config)
+]
+device_id_decryption: v1.0.0
+mount: mounting /dev/mmcblk0p1 on /mnt/sdcard/ failed: No such file or directory
+curr spk_on_off:1 
+set spk_on_off:1 
+IPC_APP_set_baby_cry_detect_switch:0
+IPC_APP_set_baby_cry_det_sensitivity:0
+gv_plat_sys_init:IMP-1.1.6:T31-L
+gv_read_sensor_name_and_addr:sc2336p
+cmdline[console=ttyS1,115200n8 mem=41296K@0x0 rmem=24240K@0x2854000 init=/linuxrc rootfstype=squashfs root=/dev/mtdblock2 rw mtdparts=jz_sfc:256k(uboot),1792k(kernel),960k(rootfs),4800k(app),384k(config)
+]
+---- FPGA board is ready ----
+  Board UID : 30AB6E51
+  Board HW ID : 72000460
+  Board rev.  : 5DE5A975
+  Board date  : 20190326
+-----------------------------
+gv_plat_io_init:3
+_card_io_init
+sample_encoder_init:0:393216
+sample_encoder_init:1:153600
+sample_encoder_init:5:102400
+set jpeg streamMngCtx suceess
+[0:00:05.988][I][mpp]Image flip off
+gv_plat_audio_ai_init:76
+gv_plat_audio_start_ai:189
+warn: shm_init,53shm init already
+warn: shm_init,53shm init already
+[0:00:06.951][I][mpp][hd]Get video stream start=[0] watchdog fd=[0]
+[0:00:06.951][I][mpp][sd]Get video stream start=[1] watchdog fd=[1]
+[0:00:06.951][I][mpp]Snapshot watchdog fd=[2]
+[0:00:06.952][I][mpp][ai]Get audio stream start watchdog fd=[3]
+[0:00:07.003][I][mpp]Init complete!
+build data: Nov 29 2024 17:49:28
+_gv_osd_init:0:0:0
+_gv_osd_init:1:0:1
+gv_plat_video_osd_init:0
+_gv_osd_init:2:1:0
+_gv_osd_init:3:1:1
+gv_plat_video_osd_init:1
+[0:00:07.100][I][net]Init complete!
+ifconfig: SIOCSIFADDR: No such device
+ifconfig: SIOCGIFFLAGS: No such device
+curr sound_detech_switch:0 
+cat: can't open '/tmp/udhcpc_eth0.pid': No such file or directory
+kill: you need to specify whom to kill
+rm: can't remove '/tmp/udhcpc_eth0.pid': No such file or directory
+gv_rtsp_server_update_username_password:/21232f297a57a5a743894a0e4a801fc3/live/channel0
+gv_rtsp_server_update_username_password:/21232f297a57a5a743894a0e4a801fc3/live/channel1
+IPC_APP_set_sharp_val:50 
+[0:00:07.246][W][net]wifi num: 9
+IPC_APP_set_contrast_val:50 
+IPC_APP_set_bright_val:50 
+[0:00:07.384][I][led]Init complete!
+curr light_on_off:1 
+set night_mode:0 
+curr blub_on_off:0 
+curr blub_on_off:0 
+[0:00:07.406][I][btn]Init complete!
+curr wdr_on_off:0 
+set wdr_on_off:0 
+onvif_switch 0
+IPC_APP_set_audio_aec_status:1
+[0:00:09.744][I][net]insmod atbm603x_wifi_usb.ko wifi_bt_comb=1 success!
+[0:00:09.745][I][net]Check wifi exist!
+curr flip_on_off:0 
+set flip_on_off:0 
+[0:00:09.761][I][mpp]Image flip off
+patrol_switch 0
+*************
+ 0x82b504 
+*****************
+*************
+ 0x436ab8 
+*****************
+IPC_APP_get_ap_mode_sw:2224 ap_mode_ws:0 
+Dbg:SDK Version:< TUYA IOT SDK V:5.3.37 BS:40.00_PT:2.2_LAN:3.4_CAD:1.0.4_CD:1.0.0 >
+< BUILD AT:2023_07_21_18_15_50 BY ci_manage FOR ty_ipc_wr_wl_linux_sdk AT mips-gcc472-uclibc216-64bit-r233 >
+IOT DEFS < WIFI_GW:1 DEBUG:1 KV_FILE:1 SHUTDOWN_MODE:1 LITTLE_END:1 TLS_MODE:4 ENABLE_CLOUD_OPERATION:1 OPERATING_SYSTEM:100 ENABLE_SYS_RPC:0 RELIABLE_TRANSFER:0 ENABLE_LAN_ENCRYPTION:1 ENABLE_LAN_LINKAGE:0 ENABLE_LAN_DEV:0 >
+ 
+ 
+Dbg:sys_info.totalram 35604 KB
+Dbg:Init Value.storage_path /conf/tuya/
+Dbg:Init Value.upgrade_file_path /tmp/upgrade.file
+Dbg:Init Value.sd_base_path /mnt/sdcard/
+Dbg:Init Value.product_key taosr5hbt1yz7clu
+Dbg:Init Value.uuid jdwsac5d7ee1f9669bda
+Dbg:Init Value.auth_key 2Rsfeal4oZL5fF51US2KqOIMBKYF2i47
+Dbg:Init Value.p2p_id 
+Dbg:Init Value.dev_sw_version 2.156.1074
+Dbg:Init Value.max_p2p_user 5
+curr event:0 
+[01-01 18:12:15 TUYA D][tuya_ws_db.c:450] init fs. Path: /conf/tuya/ 
+[01-01 18:12:15 TUYA E][tuya_ring_buffer.c:686] ring buffer ch0st0tr9 not inited
+ 
+[01-01 18:12:15 TUYA E][tuya_ring_buffer.c:686] ring buffer ch0st0tr0 not inited
+ 
+[01-01 18:12:15 TUYA E][tuya_ring_buffer.c:686] ring buffer ch0st0tr1 not inited
+ 
+[01-01 18:12:15 TUYA E][tuya_ring_buffer.c:686] ring buffer ch0st0tr9 not inited
+ 
+[01-01 18:12:15 TUYA I][kv_storge.c:45] Init Kvs With File:/conf/tuya/
+[01-01 18:12:15 TUYA D][simplekv.c:945] path:/conf/tuya/
+[01-01 18:12:15 TUYA E][tuya_ring_buffer.c:686] ring buffer ch0st0tr0 not inited
+ 
+[01-01 18:12:15 TUYA E][tuya_ring_buffer.c:686] ring buffer ch0st0tr1 not inited
+ 
+[01-01 18:12:15 TUYA E][tuya_ring_buffer.c:686] ring buffer ch0st0tr9 not inited
+ 
+[01-01 18:12:15 TUYA D][simplekv.c:981] get encrypt_key[���US����ykR��]
+[01-01 18:12:15 TUYA D][simplekv.c:989] both file not exist /conf/tuya/tuya_user.db
+[01-01 18:12:15 TUYA D][simplekv.c:310] size in: 0 and final: 28700 And mag_rec_max: 512
+[01-01 18:12:15 TUYA D][simplekv.c:325] create data hd success
+[01-01 18:12:15 TUYA D][simplekv.c:1083] init NEW normal file
+[01-01 18:12:15 TUYA D][simplekv.c:203] update crc 3536627844
+[01-01 18:12:15 TUYA E][tuya_ring_buffer.c:686] ring buffer ch0st0tr9 not inited
+ 
+[01-01 18:12:15 TUYA E][tuya_ring_buffer.c:686] ring buffer ch0st0tr0 not inited
+ 
+[01-01 18:12:15 TUYA E][tuya_ring_buffer.c:686] ring buffer ch0st0tr1 not inited
+ 
+[01-01 18:12:15 TUYA D][simplekv.c:359] write head to normal file success
+[01-01 18:12:15 TUYA E][tuya_ring_buffer.c:686] ring buffer ch0st0tr9 not inited
+ 
+[01-01 18:12:15 TUYA E][tuya_ring_buffer.c:686] ring buffer ch0st0tr0 not inited
+ 
+[01-01 18:12:15 TUYA E][tuya_ring_buffer.c:686] ring buffer ch0st0tr1 not inited
+ 
+[01-01 18:12:15 TUYA I][uni_thread.c:228] thread_create name:sys_timer,stackDepth:4096,totalstackDepth:4096,priority:5
+[01-01 18:12:15 TUYA D][simplekv.c:1111] init from normal file success.
+[01-01 18:12:15 TUYA I][mqc_app.c:350] mqc app init ...
+[01-01 18:12:15 TUYA I][uni_thread.c:228] thread_create name:cmmod,stackDepth:4096,totalstackDepth:8192,priority:4
+[01-01 18:12:15 TUYA D][mqc_app.c:144] mq_pro:5 cnt:1
+[01-01 18:12:15 TUYA D][mqc_app.c:144] mq_pro:31 cnt:2
+[01-01 18:12:15 TUYA D][uni_thread.c:250] Thread:cmmod Exec Start. Set to Running Stat
+[01-01 18:12:15 TUYA D][uni_thread.c:250] Thread:sys_timer Exec Start. Set to Running Stat
+[01-01 18:12:15 TUYA E][tuya_ring_buffer.c:686] ring buffer ch0st0tr9 not inited
+ 
+[01-01 18:12:15 TUYA E][tuya_ring_buffer.c:686] ring buffer ch0st0tr0 not inited
+ 
+[01-01 18:12:15 TUYA E][tuya_ring_buffer.c:686] ring buffer ch0st0tr1 not inited
+ 
+ [01-01 18:12:15 TUYA E][tuya_ring_buffer.c:686] ring buffer ch0st0tr9 not inited
+ 
+[01-01 18:12:15 TUYA D][svc_online_log.c:295] svc online log init success
+[01-01 18:12:15 TUYA E][log_seq.c:863] open err
+[01-01 18:12:15 TUYA I][uni_thread.c:228] thread_create name:wk_th-0,stackDepth:5120,totalstackDepth:13312,priority:3
+[01-01 18:12:15 TUYA D][simplekv.c:1211] read key:gw_bi isFuzzy:0 skipCnt:0
+[01-01 18:12:15 TUYA D][simplekv.c:1247] no key find
+[01-01 18:12:15 TUYA D][simplekv.c:1294] __read_kv_raw fail. -3
+[01-01 18:12:15 TUYA D][simplekv.c:1336] __read_kv_with_decode fail. -3
+[01-01 18:12:15 TUYA E][ws_db_gw.c:80] wd_protected_read fails gw_bi -6
+[01-01 18:12:15 TUYA D][ws_db_gw.c:208] gw base read finish:-6
+[01-01 18:12:15 TUYA D][tuya_bt_sdk.c:92] ty bt cmmod regist ok:1
+[01-01 18:12:15 TUYA D][tuya_ble_api.c:315] upd adv para, send conn_req beacon.
+dev id key: 16
+d4 1d 8c d9 8f 00 b2 04 e9 80 09 98 ec f8 42 7e 
+[01-01 18:12:15 TUYA I][bt_ext_porting.c:122] [TUYA-BTUART]tuya ext bt port init
+ble_transport_ll_init
+[01-01 18:12:15 TUYA N][tuya_ble_api.c:650] ble sdk re_inited
+[01-01 18:12:15 TUYA D][tuya_ble_active.c:523] bt active init
+[01-01 18:12:15 TUYA N][tuya_bt_sdk.c:141] ty bt sdk init success finish
+[01-01 18:12:15 TUYA N][uni_log.c:197] SetLogManageAttr 3
+TUYA_APP_Init_Ring_Buffer:ring_length:10
+[0:00:10.151][I][tuya]init ring buffer Channel:0 Enable:1
+[0:00:10.151][I][tuya]video_bitrate 1024, video_fps 20
+[01-01 18:12:15 TUYA I][tuya_ring_buffer.c:588] Init Ring Buffer success: ch0st0tr0 size:1310720 nodes:200
+[0:00:10.154][I][tuya]init ring buffer success. channel:0
+[0:00:10.154][I][tuya]init ring buffer Channel:1 Enable:1
+[0:00:10.154][I][tuya]video_bitrate 512, video_fps 20
+[01-01 18:12:15 TUYA I][tuya_ring_buffer.c:588] Init Ring Buffer success: ch0st0tr1 size:655360 nodes:200
+[0:00:10.155][I][tuya]init ring buffer success. channel:1
+[0:00:10.155][I][tuya]init ring buffer Channel:2 Enable:0
+[0:00:10.155][I][tuya]init ring buffer Channel:3 Enable:0
+[0:00:10.155][I][tuya]init ring buffer Channel:4 Enable:0
+[0:00:10.155][I][tuya]init ring buffer Channel:5 Enable:0
+[0:00:10.156][I][tuya]init ring buffer Channel:6 Enable:0
+[0:00:10.156][I][tuya]init ring buffer Channel:7 Enable:0
+[0:00:10.156][I][tuya]init ring buffer Channel:8 Enable:0
+[0:00:10.156][I][tuya]init ring buffer Channel:9 Enable:1
+[0:00:10.156][I][tuya]audio_sample 8000, audio_databits 16, audio_fps 25
+[01-01 18:12:15 TUYA I][tuya_ring_buffer.c:588] Init Ring Buffer success: ch0st0tr9 size:160000 nodes:250
+[0:00:10.156][I][tuya]init ring buffer success. channel:9
+[0:00:10.156][I][tuya]init ring buffer Channel:10 Enable:0
+[0:00:10.156][I][tuya]init ring buffer Channel:11 Enable:0
+[0:00:10.156][I][tuya]init ring buffer Channel:12 Enable:0
+[0:00:10.156][I][tuya]init ring buffer Channel:13 Enable:0
+[0:00:10.156][I][tuya]init ring buffer Channel:14 Enable:0
+[0:00:10.156][I][tuya]init ring buffer Channel:15 Enable:0
+[01-01 18:12:15 TUYA E][ws_db_gw.c:80] wd_protected_read fails gw_bi -6
+-------- cmd --------
+00000000: 04 00 01 03 0c 00                                  ......
+-------- cmd --------
+00000000: 04 00 01 01 10 00                                  ......
+-------- cmd --------
+00000000: 04 00 01 02 10 00                                  ......
+-------- cmd --------
+00000000: 04 00 01 03 10 00                                  ......
+-------- cmd --------
+00000000: 0c 00 01 01 0c 08 90 80 00 02 00 80 00 20          ............. 
+-------- cmd --------
+00000000: 0c 00 01 01 20 08 7f fe 0f 00 00 00 00 00          .... ........
+-------- cmd --------
+00000000: 04 00 01 02 20 00                                  .... .
+-------- cmd --------
+00000000: 04 00 01 03 20 00                                  .... .
+-------- cmd --------
+00000000: 04 00 01 09 10 00                                  ......
+-------- cmd --------
+00000000: 05 00 01 2d 20 01 00                               ...- ..
+[01-01 18:12:15 TUYA N][tuya_devos_entry.c:1758] Last reset reason: 255
+WIFI Get MAC 60-56-EE-A9-36-C5
+[01-01 18:12:15 TUYA N][tuya_devos_entry.c:1122] serial_no:6056eea936c5
+Set Country Code:(null) 
+[01-01 18:12:15 TUYA N][tuya_devos_entry.c:1153] gw_cntl.gw_wsm.stat:0
+[01-01 18:12:15 TUYA N][tuya_devos_netcfg.c:1345] gw_cntl->gw_wsm.nc_tp:0
+[01-01 18:12:15 TUYA N][tuya_devos_netcfg.c:1346] gw_cntl->gw_wsm.md:0
+[01-01 18:12:15 TUYA N][tuya_devos_netcfg.c:1360] wifi config method not fit
+[01-01 18:12:15 TUYA E][tuya_devos_entry.c:1769] ret:-2
+[01-01 18:12:15 TUYA E][tuya_ws_db.c:326] kvs_read fails gw_di -6
+[01-01 18:12:15 TUYA E][ws_db_gw.c:494] gw_di read fail:-6
+[01-01 18:12:15 TUYA E][tuya_ws_db.c:326] kvs_read fails gw_ai -6
+[01-01 18:12:15 TUYA E][ws_db_gw.c:636] gw_ai read fail:-6
+[01-01 18:12:16 TUYA I][uni_thread.c:228] thread_create name:health_monitor,stackDepth:1536,totalstackDepth:14848,priority:5
+[01-01 18:12:16 TUYA E][tuya_ipc_hardware_info.c:172] NO sensor info. Please check if you need.
+[01-01 18:12:16 TUYA N][tuya_bt_sdk.c:162] ty bt upd product:taosr5hbt1yz7clu 0
+uuid: 20
+6a 64 77 73 61 63 35 64 37 65 65 31 66 39 36 36 39 62 64 61 
+dev_id_tmp: 16
+4c d8 1c 28 c1 4d 1c e3 81 3c 91 86 24 b3 4a ff 
+dev_id_tmp2: 20
+6a 64 77 73 61 63 35 64 37 65 65 31 66 39 36 36 39 62 64 61 
+WIFI Get MAC 60-56-EE-A9-36-C5
+rtc device node i2c-1
+tuya_adapter_wifi_set_work_mode:905
+Error for wireless request "Set Mode" (8B06) :
+    SET failed on device wlan0 ; Invalid argument.
+gv_rtc_get_time
+hwclock: can't open '/dev/misc/rtc': No such file or directory
+[0:00:11.307][I][mdq]Init mdq success, num=[0], size=[393216], max frame=[196608]
+gv_common_queue_init
+Error for wireless request "Set Mode" (8B06) :
+    SET failed on device wlan0 ; Invalid argument.
+Error for wireless request "Set Mode" (8B06) :
+    SET failed on device wlan0 ; Invalid argument.
+WIFI Set Mode 3
+[0:00:11.775][W][mpp]No file with related name:[ap_establishing] found
+cat: can't open '/tmp/udhcpc_wlan0.pid': No such file or directory
+kill: you need to specify whom to kill
+rm: can't remove '/tmp/udhcpc_wlan0.pid': No such file or directory
+killall: wpa_supplicant: no process killed
+[0:00:11.950][I][net]Disconnect station
+killall: udhcpd: no process killed
+[0:00:11.963][I][net]udhcpd stop!
+[0:00:12.100][I][net]AP destroy success!
+[0:00:12.921][I][net]wpa start success
+[0:00:12.955][I][net]udhcpd start!
+[0:00:12.955][I][net]AP [SmartLife-36C5:NONE] build success!
+ tuya_adapter_wifi_ap_start:1141 ssid: SmartLife-36C5,ip:192.168.175.1,mask:255.255.255.0
+[0:00:12.955][W][mpp]No file with related name:[booting] found
+[0:00:12.955][I][mpp]New voice: /app/sound/wifi_config.wav
+[0:00:12.956][W][mpp]No file with related name:[ap_established] found
+curr event:1 
+Enable Qrcode 
+[01-01 18:12:18 TUYA I][uni_thread.c:228] thread_create name:lpc_task,stackDepth:3072,totalstackDepth:17920,priority:3
+Dbg:Net status change to:2
+Dbg:Net status change to:5
+[774:hwl_get_local_ip_info] get gateway error
+======================= get isp crop ====================
+WIFI[0] Get IP:192.168.175.1
+[01-01 18:12:18 TUYA E][mqtt_client.c:802] hand null.
+[01-01 18:12:18 TUYA I][uni_thread.c:228] thread_create name:udp_ap_v3,stackDepth:3584,totalstackDepth:21504,priority:5
+[01-01 18:12:18 TUYA N][tuya_ble_api.c:439] update bound stat:0
+dev id key: 16
+f4 b1 49 86 88 b0 a3 00 c7 9d 71 11 22 29 11 cb
+====== tuya_ext_bt_reset_adv ======
+[01-01 18:12:18 TUYA I][bt_ext_porting.c:163] [TUYA-BTUART]reset adv:
+2 1 6 3 2 1 a2 14 16 1 a2 0 74 61 6f 73 72 35 68 62 74 31 79 7a 37 63 6c 75
+[01-01 18:12:18 TUYA I][bt_ext_porting.c:165] [TUYA-BTUART]resp:
+3 9 54 59 19 ff d0 7 9 3 3 0 c 0 8 c1 cb 60 60 76 77 93 dd 46 70 31 a3 10 80 ed
+-------- cmd --------
+00000000: 24 00 01 08 20 20 1c 02 01 06 03 02 01 a2 14 16    $...  ..........
+00000010: 01 a2 00 74 61 6f 73 72 35 68 62 74 31 79 7a 37    ...taosr5hbt1yz7
+00000020: 63 6c 75 ef 0f 75                                  clu..u
+-------- cmd --------
+00000000: 24 00 01 09 20 20 1e 03 09 54 59 19 ff d0 07 09    $...  ...TY.....
+00000010: 03 03 00 0c 00 08 c1 cb 60 60 76 77 93 dd 46 70    ........``vw..Fp
+00000020: 31 a3 10 80 ed 75                                  1....u
+-------- cmd --------
+00000000: 13 00 01 06 20 0f 30 00 60 00 00 00 00 00 00 00    .... .0.`.......
+00000010: 00 00 00 07 00                                     .....
+-------- cmd --------
+00000000: 05 00 01 0a 20 01 01                               .... ..
+[01-01 18:12:18 TUYA N][tuya_ble_api.c:727] ble adv && resp changed
+udhcpd: started, v1.32.1
+[01-01 18:12:19 TUYA E][tuya_devos_activate.c:517] network unavailable
+[01-01 18:12:20 TUYA E][tuya_devos_activate.c:517] network unavailable
+[01-01 18:12:21 TUYA E][tuya_devos_activate.c:517] network unavailable
+[01-01 18:12:22 TUYA E][tuya_devos_activate.c:517] network unavailable
+WIFI[1] Get IP:192.168.1.1
+[01-01 18:12:23 TUYA E][app_agent.c:823] sendto Fail: len:220 ret:-1,errno:-18 port:6667
