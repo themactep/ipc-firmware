@@ -1,0 +1,317 @@
+U-Boot SPL 2013.07 (Aug 11 2023 - 10:18:31)
+Board info: T41NQ
+
+apll_freq = 1104000000
+mpll_freq = 1400000000
+vpll_freq = 1188000000
+sdram init start
+DDR clk rate 700000000
+DDRP_INNOPHY_PLL_CTRL: 00000028
+DDRP_INNOPHY_PLL_CTRL: 00000020
+T41NQ ddr phy skew set
+CPU0 RESET ERROR PC: faf2fefa
+CPU1 RESET ERROR PC: b67e367f
+mem data:
+81000000:   00000000  ffffffff  00000000  ffffffff
+81000010:   00000000  ffffffff  00000000  ffffffff
+81000020:   00000000  ffffffff  00000000  ffffffff
+81000030:   00000000  ffffffff  00000000  ffffffff
+image entry point: 0x80100000
+
+Board: ISVP (Ingenic XBurst2 T41 SoC)
+DRAM size is 128 MiB
+Top of RAM usable for U-Boot at: 88000000
+Reserving 431k for U-Boot at: 87f94000
+Reserving 32784k for malloc() at: 85f90000
+Reserving 32 Bytes for Board Info at: 85f8ffe0
+Reserving 124 Bytes for Global Data at: 85f8ff64
+Reserving 128k for boot params() at: 85f6ff64
+Stack Pointer at: 85f6ff48
+Now running in RAM - U-Boot at: 87f94000
+MMC:   MSC: 0
+SF: Detected MX25L25645G/35F, flash size: 32MB, manufacturer id: c2
+
+*** Warning - bad CRC, using default environment
+
+Data transfer:    serial
+Net:   Jz4775-9161
+[[ 5096b4bf6017a570 ]]
+autoboot in 1 seconds
+ 0 SF: Detected MX25L25645G/35F, flash size: 32MB, manufacturer id: c2
+
+--->probe spend 6 ms
+SF: 2621440 bytes @ 0x40000 Read: OK
+--->read spend 842 ms
+   Image Name:   Linux-4.4.94
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    2328828 Bytes = 2.2 MiB
+   Load Address: 80010000
+   Entry Point:  804ccb30
+   Verifying Checksum ... OK
+   Uncompressing lzma Kernel Image ... OK
+
+Starting kernel ...
+
+[    0.000000] Linux version 4.4.94 (root@ubuntu) (gcc version 7.2.0 (Ingenic Linux-Release5.1.4.1-Default(xburst2(fp64)+glibc2.29+Go language) 2022.08-08 10:51:21) ) #1 SMP PREEMPT Fri Jul 28 15:19:08 CST 2023
+[    0.000000] CPU0 RESET ERROR PC:FAF2FEFA
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 00132100 (Ingenic XBurst@II)
+[    0.000000] FPU revision is: 00f32100
+[    0.000000] MIPS: machine is ingenic,marmot
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 00662000 @ 00010000 (usable)
+[    0.000000]  memory: 0003e000 @ 00672000 (usable after init)
+[    0.000000] User-defined physical RAM map:
+[    0.000000]  memory: 04200000 @ 00000000 (usable)
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000000000000-0x00000000041fffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x00000000041fffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x00000000041fffff]
+[    0.000000] [SMP] Slave CPU(s) 1 available.
+[    0.000000] Primary instruction cache 32kB, VIPT, 8-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 8-way, VIPT, no aliases, linesize 32 bytes
+[    0.000000] Unified secondary cache 128kB 8-way, linesize 64 bytes.
+[    0.000000] PERCPU: Embedded 10 pages/cpu @81118000 s8528 r8192 d24240 u40960
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping off.  Total pages: 16764
+[    0.000000] Kernel command line: console=ttyS1,115200n8 mem=66M@0x0 rmem=48M@0x4200000 nmem=14M@0x7200000 init=/linuxrc rootfstype=squashfs root=/dev/mtdblock2 rw mtdparts=sfc0_nor:0x40000(boot),0x380000(kernel),0x6c0000(rootfs),0x1280000(user),0x2f0000(mtd),0x10000(factory),0x2000000(all) lpj=11968512
+[    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Memory: 59272K/67584K available (4877K kernel code, 270K rwdata, 1380K rodata, 248K init, 157K bss, 8312K reserved, 0K cma-reserved)
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] parse cpu-intc-iomap, intc define in dt is too large!
+[    0.000000] core irq setup finished and percpu irq inited! NR_IRQS = 419
+[    0.000000] t41 Clock Power Management Unit init sucess!
+[    0.000000] parse cpu-ost-iomap, ost number define in dt is too large!
+[    0.000000] percpu cpu_num:0 timerevent init
+[    0.000000] clockevents_config_and_register success.
+[    0.000000] clocksource: jz_clocksource: mask: 0x7fffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+[    0.000000] sched_clock: 64 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+[    0.000396] Console: colour dummy device 80x25
+[    0.004835] Calibrating delay loop (skipped) preset value.. 2393.70 BogoMIPS (lpj=11968512)
+[    0.013297] pid_max: default: 32768 minimum: 301
+[    0.018155] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.024786] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.032498] [SMP] Prepare 2 cores., cpu: 0
+[    0.115993] [SMP] Booting CPU1 ...
+[    0.119365] CPU1 RESET ERROR PC:3E3E2FE1
+[    0.119380] Primary instruction cache 32kB, VIPT, 8-way, linesize 32 bytes.
+[    0.119385] Primary data cache 32kB, 8-way, VIPT, no aliases, linesize 32 bytes
+[    0.119389] Unified secondary cache 128kB 8-way, linesize 64 bytes.
+[    0.119446] percpu cpu_num:1 timerevent init
+[    0.119461] clockevents_config_and_register success.
+[    0.119466] CPU1 revision is: 00132100 (Ingenic XBurst@II)
+[    0.119468] FPU revision is: 00f32100
+[    0.119685] Brought up 2 CPUs
+[    0.166463] devtmpfs: initialized
+[    0.174116] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.184099] futex hash table entries: 512 (order: 2, 16384 bytes)
+[    0.190379] pinctrl core: initialized pinctrl subsystem
+[    0.196061] NET: Registered protocol family 16
+[    0.205086] ingenic pinctrl 10010000.pinctrl: 4 gpio chip add success, pins 128
+[    0.213073] ingenic pinctrl 10010000.pinctrl: ingenic pinctrl probe success
+[    0.225246] dmmu_init 807 PTRS_PER_PTE = 1024
+[    0.312697] ingenic-dma 13420000.dma: INGENIC SoC DMA initialized
+[    0.320045] usbcore: registered new interface driver usbfs
+[    0.325683] usbcore: registered new interface driver hub
+[    0.331210] usbcore: registered new device driver usb
+[    0.336472] inno phy probe success
+[    0.341447] Bluetooth: Core ver 2.21
+[    0.345118] NET: Registered protocol family 31
+[    0.349604] Bluetooth: HCI device and connection manager initialized
+[    0.356035] Bluetooth: HCI socket layer initialized
+[    0.360945] Bluetooth: L2CAP socket layer initialized
+[    0.366106] Bluetooth: SCO socket layer initialized
+[    0.372383] clocksource: Switched to clocksource jz_clocksource
+[    0.396577] NET: Registered protocol family 2
+[    0.401358] TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.408431] TCP bind hash table entries: 1024 (order: 1, 8192 bytes)
+[    0.414899] TCP: Hash tables configured (established 1024 bind 1024)
+[    0.421323] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.427261] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.433770] NET: Registered protocol family 1
+[    0.438421] RPC: Registered named UNIX socket transport module.
+[    0.444405] RPC: Registered udp transport module.
+[    0.449117] RPC: Registered tcp transport module.
+[    0.453922] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.462944] squashfs: version 4.0 (2021/14/49) Phillip Lougher
+[    0.469248] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    0.481373] jitterentropy: Initialization failed with host not compliant with requirements: 2
+[    0.490582] io scheduler noop registered
+[    0.494553] io scheduler deadline registered
+[    0.498823] io scheduler cfq registered (default)
+[    0.505462] Ingenic drawbox probe sucess!
+[    0.509786] vpu_register
+[    0.512271] helix probe success
+[    0.516394] dma_malloc of jzaip_t is ok! size = 1024 Bytes
+[    0.522254] dma_malloc of jzaip_f is ok! size = 106600 Bytes
+[    0.528437] dma_malloc of jzaip_p is ok! size = 221184 Bytes
+[    0.534586] @@@ AIP driver init sucess (Version: H20230331a) @@@
+[    0.541108] 10031000.serial: ttyS1 at MMIO 0x10031000 (irq = 58, base_baud = 7291666) is a uart1
+[    0.550066] console [ttyS1] enabled
+[    0.550066] console [ttyS1] enabled
+[    0.557255] bootconsole [early0] disabled
+[    0.557255] bootconsole [early0] disabled
+[    0.568835] ingenic SADC driver registeres over!
+[    0.574367] ingenic sadc aux probe success
+[    0.579040] ingenic sadc aux probe success
+[    0.583774] ingenic sadc aux probe success
+[    0.588438] ingenic sadc aux probe success
+[    0.595083] ingenic-tcu 10002000.tcu: Ingenic TCU driver register completed ret = 0
+[    0.604146] ingenic-sfc 13440000.sfc0: Found Supported nor device, BE = 32K, id = c22019, name = MX25L25645G/35F
+[    0.615012] ingenic-sfc 13440000.sfc0: nor flash now use standard mode!
+[    0.622063] mtd: sfc0_nor: partitioning exceeds flash size, truncating
+[    0.629028] mtd: sfc0_nor: skipping zero sized partition
+[    0.634702] 6 cmdlinepart partitions found on MTD device sfc0_nor
+[    0.641153] Creating 6 MTD partitions on "sfc0_nor":
+[    0.646452] 0x000000000000-0x000000040000 : "boot"
+[    0.653015] 0x000000040000-0x0000003c0000 : "kernel"
+[    0.659674] 0x0000003c0000-0x000000a80000 : "rootfs"
+[    0.666358] 0x000000a80000-0x000001d00000 : "user"
+[    0.672908] 0x000001d00000-0x000001ff0000 : "mtd"
+[    0.679308] 0x000001ff0000-0x000002000000 : "factory"
+[    0.686090] ingenic-sfc 13440000.sfc0: SPI NOR MTD LOAD OK
+[    0.692248] dwc2 13500000.otg: Configuration mismatch. Forcing host mode
+[    0.699466] OTG CLK 1f9f4fc4
+[    0.703817] CPCCR CLK 1580
+[    0.905869] dwc2 13500000.otg: DWC OTG Controller
+[    0.910883] dwc2 13500000.otg: new USB bus registered, assigned bus number 1
+[    0.918427] dwc2 13500000.otg: irq 29, io mem 0x00000000
+[    0.925056] hub 1-0:1.0: USB hub found
+[    0.929077] hub 1-0:1.0: 1 port detected
+[    0.934224] ingenic-i2c 10050000.i2c: register i2c0 success.
+[    0.941468] usbcore: registered new interface driver btusb
+[    0.947465] sdhci: Secure Digital Host Controller Interface driver
+[    0.954039] sdhci: Copyright(c) Pierre Ossman
+[    0.959002] ingenic,sdhci 13060000.msc: allocated mmc-pwrseq
+[    1.002450] mmc0: SDHCI controller on ingenic-sdhci [13060000.msc] using ADMA
+[    1.022599] mmc0: card removed
+[    1.026188] usbcore: registered new interface driver usbhid
+[    1.032342] usbhid: USB HID core driver
+[    1.036582] Netfilter messages via NETLINK v0.30.
+[    1.041638] ip_set: protocol 6
+[    1.045110] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    1.050860] NET: Registered protocol family 17
+[    1.055762] Bluetooth: RFCOMM socket layer initialized
+[    1.061223] Bluetooth: RFCOMM ver 1.11
+[    1.065282] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    1.070919] Bluetooth: BNEP socket layer initialized
+[    1.076234] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    1.082577] Bluetooth: HIDP socket layer initialized
+[    1.089201] soc_vpu probe success,version:1.0.0-03203fd46d
+[    1.110101] VFS: Mounted root (squashfs filesystem) readonly on device 31:2.
+[    1.120871] devtmpfs: mounted
+[    1.124247] Freeing unused kernel memory: 248K
+[    1.153811] random: nonblocking pool is initialized
+[    1.322453] usb 1-1: new high-speed USB device number 2 using dwc2
+Create device file...
+dev:    size   erasesize  name
+mtd0: 00040000 00008000 "boot"
+mtd1: 00380000 00008000 "kernel"
+mtd2: 006c0000 00008000 "rootfs"
+mtd3: 01280000 00008000 "user"
+mtd4: 002f0000 00008000 "mtd"
+mtd5: 00010000 00008000 "factory"
+[    1.629583] jffs2: notice: (490) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+mdev is ok......
+[    1.777433] @@@@ avpu driver ok(version H20220825a) @@@@@
+[    1.812462] @@@@@ inner codec power up@@@@@@
+[    2.202451] @@@@ audio driver ok(version H20230311a) @@@@@
+[    2.400068] @@@@ tx-isp-probe ok (version H20230627b) compiler date: Jun 27 2023 @@@@
+[    2.432996] TCU0
+[    2.467318] aic_bluetooth_mod_init
+[    2.471037] RELEASE DATE:2023_0506_1634
+[    2.475429] AICWFDBG(LOGINFO)	aicwf_usb_probe vid:0xA69C pid:0x8800 icl:0x0 isc:0x0 ipr:0x0
+[    2.484539] AICWFDBG(LOGINFO)	aicloadfw_chipmatch USE AIC8800
+[    2.490717] Aic high speed USB device detected
+[    2.496004] chip_id=7, chip_sub_id=20
+[    2.499885] cfg u04
+[    2.505401] aic_load_firmware :firmware path = /system/etc/wifi/fmacfw.bin
+[    2.606779] file md5:268ad09c586759f2657ce3290181e7a4
+[    2.612226] ### Upload fmacfw.bin firmware, @ = 110000  size=275116
+[    2.648831] fw download complete
+[    2.648831]
+[    2.653864] aic_load_firmware :firmware path = /system/etc/wifi/fw_adid_u03.bin
+[    2.661925] file md5:cf3ee68167beda73aaa5cb7a17169b4d
+[    2.667410] ### Upload fw_adid_u03.bin firmware, @ = 161928  size=1208
+[    2.674614] fw download complete
+[    2.674614]
+[    2.679606] aic_load_firmware :firmware path = /system/etc/wifi/fw_patch_u03.bin
+[    2.718287] file md5:d1d12ca679b5904641ce7478ec688786
+[    2.723782] ### Upload fw_patch_u03.bin firmware, @ = 100000  size=64528
+[    2.738156] fw download complete
+[    2.738156]
+[    2.743189] aic_load_firmware :firmware path = /system/etc/wifi/fw_patch_table_u03.bin
+[    2.751889] file md5:06a10abb14f911ebe8f4a71dc5f2e557
+[    2.757359] ### Upload fw_patch_table_u03.bin fw_patch_table, size=1344
+[    2.764439] aicbt_patch_table_load bt btmode:0
+[    2.780445] patch version - Jul 19 2023 17:41:30 - git efb04df
+[    2.786681] fw_patch_table download complete
+[    2.786681]
+[    2.792787] userconfig file path:aic_userconfig.txt
+[    2.798136] aic_load_firmware :firmware path = /system/etc/wifi/aic_userconfig.txt
+[    2.806470] file md5:80e3983e87e5531e67bcc5e978964976
+[    2.811914] ### Upload aic_userconfig.txt userconfig, size=415
+[    2.818127] rwnx_plat_userconfig_parsing: AIC USERCONFIG 2021/0911/2127
+[    2.825233] rwnx_plat_userconfig_parsing: txpwr_idx
+[    2.830486] rwnx_plat_userconfig_set_value:command=enable value=1
+[    2.837128] rwnx_plat_userconfig_set_value:command=dsss value=9
+[    2.843585] rwnx_plat_userconfig_set_value:command=ofdmlowrate_2g4 value=10
+[    2.851139] rwnx_plat_userconfig_set_value:command=ofdm64qam_2g4 value=10
+[    2.858537] rwnx_plat_userconfig_set_value:command=ofdm256qam_2g4 value=9
+[    2.865930] rwnx_plat_userconfig_set_value:command=ofdm1024qam_2g4 value=8
+[    2.873405] rwnx_plat_userconfig_set_value:command=ofdmlowrate_5g value=10
+[    2.880866] rwnx_plat_userconfig_set_value:command=ofdm64qam_5g value=9
+[    2.888063] rwnx_plat_userconfig_set_value:command=ofdm256qam_5g value=9
+[    2.895348] rwnx_plat_userconfig_set_value:command=ofdm1024qam_5g value=8
+[    2.902743] rwnx_plat_userconfig_parsing: txpwr_ofst
+[    2.908097] rwnx_plat_userconfig_set_value:command=ofst_enable value=0
+[    2.915228] rwnx_plat_userconfig_set_value:command=ofst_chan_1_4 value=0
+[    2.922523] rwnx_plat_userconfig_set_value:command=ofst_chan_5_9 value=0
+[    2.929800] rwnx_plat_userconfig_set_value:command=ofst_chan_10_13 value=0
+[    2.937272] rwnx_plat_userconfig_set_value:command=ofst_chan_36_64 value=0
+[    2.944742] rwnx_plat_userconfig_set_value:command=ofst_chan_100_120 value=0
+[    2.952405] rwnx_plat_userconfig_set_value:command=ofst_chan_122_140 value=0
+[    2.960058] rwnx_plat_userconfig_set_value:command=ofst_chan_142_165 value=0
+[    2.967731] rwnx_plat_userconfig_parsing: xtal cap
+[    2.972903] rwnx_plat_userconfig_set_value:command=xtal_enable value=0
+[    2.979997] rwnx_plat_userconfig_set_value:command=xtal_cap value=24
+[    2.986916] rwnx_plat_userconfig_set_value:command=xtal_cap_fine value=31
+[    2.994302] userconfig download complete
+[    2.994302]
+[    3.000016] patch_config enter
+[    3.003521] Read FW mem: 00110180
+[    3.007163] 110180=171970
+[    3.014535] usbcore: registered new interface driver aic_load_fw
+[    3.020930] app_cmp
+[    3.032595] usb 1-1: USB disconnect, device number 2
+[    3.037979] aicwf_usb_disconnect enter
+[    3.042130] aicwf_bus_deinit
+[    4.146444] usb bustx thread will to stop
+[    4.150876] usb bustx thread stop
+[    4.162453] exit aicwf_bus_deinit
+[    4.166096] usb busrx thread will to stop
+[    4.170319] usb busrx thread stop
+[    4.213614] AICWFDBG(LOGINFO)	rwnx v6.4.3.0 - 1a4b0054d2M (master)
+[    4.220193] AICWFDBG(LOGINFO)	RELEASE DATE:2023_0506_1634
+[    4.226225] usbcore: registered new interface driver aic8800_fdrv
+[    4.239791] @@@@ soc nna probe sucess (Board: T41, Version: H20230310) @@@
+[    4.249289] soc_nna_init success
+[    4.284137] exFAT: Version 1.2.9
+klogd: applet not found
+start wifi daemon ...
+[    5.186107] ieee80211 phy0:
+[    5.186107] *******************************************************
+[    5.186107] ** CAUTION: USING PERMISSIVE CUSTOM REGULATORY RULES **
+[    5.186107] *******************************************************
+check factorytest...
+   Press q -> ENTER to exit boot procedure? start arcsoft ...
+adjust timezone
+to_sys_clock  8.519021  -28800  0
+/opt/boot
+/opt/boot
+Starting ArcSoft script ...
+
+closeli login:
